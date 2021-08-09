@@ -1,1 +1,1 @@
-print("testd")
+print("test 파일")
