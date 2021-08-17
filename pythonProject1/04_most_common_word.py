@@ -47,7 +47,7 @@ class Solution:
         # 문자열 공백으로 나누기 .split()으로 리스트로 변환
         paragraph_list = str1.split(' ')
 
-        # 람다 표현식으로 리스트에서 공백 제거
+        # 람다 표현식으로 리스트에서 공백 제거０
         paragraph_list = list(filter(lambda a: a != '', paragraph_list))
 
         # banned list에 지정된 문자열은 제외
