@@ -28,6 +28,7 @@ Constraints:
 Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 
 """
+# 내 풀이
 from typing import List
 
 
@@ -72,14 +73,13 @@ sol.twoSum(nums, target)
 #
 # class Solution:
 #     def twoSum(self, nums: List[int], target: int) -> List[int]:
-#         for i, n in enumerate(nums):
+#         for i, n in enumerate(nums): # enumerate(nums) > 인덱스, 값  리턴
 #             complement = target - n
 #
-#             if complement in nums[i + 1:]:
+#             if complement in nums[i + 1:]: # 타겟에서 현재 값을 뺀 값(A)이 다음 배열안에 있는 경우(B) A+B = target
 #                 return [nums.index(n), nums[i + 1:].index(complement) + (i + 1)]
 
 # 풀이 3
-#
 # from typing import List
 #
 #
@@ -90,13 +90,16 @@ sol.twoSum(nums, target)
 #         for i, num in enumerate(nums):
 #             nums_map[num] = i
 #
+#         # > {2: 0, 7: 1, 11: 2, 15: 3}
+#
 #         # 타겟에서 첫 번째 수를 뺀 결과를 키로 조회
 #         for i, num in enumerate(nums):
+#             # if 타겟에서 현재값을 뺀값이 in nums_map에 key값이랑 같을때
+#             # and index값이 동일하지 않은 경우
 #             if target - num in nums_map and i != nums_map[target - num]:
 #                 return [i, nums_map[target - num]]
 
 # 풀이 4
-#
 # from typing import List
 #
 #
@@ -110,7 +113,7 @@ sol.twoSum(nums, target)
 #             nums_map[num] = i
 
 # 풀이 5
-#
+# 투포인터로 풀려면 정렬 필요, 정렬하게되면 index 값을 찾기 힘듬.
 # from typing import List
 #
 #
@@ -126,3 +129,10 @@ sol.twoSum(nums, target)
 #                 right -= 1
 #             else:
 #                 return [left, right]
+
+
+
+# sol = Solution()
+# nums = [2,7,11,15]
+# target = 9
+# print(sol.twoSum(nums, target))
