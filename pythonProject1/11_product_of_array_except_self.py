@@ -38,7 +38,7 @@ Follow up: Can you solve the problem in O(1) extra space complexity?
 #         mul1 = [1]
 #         mul2 = [1]
 #         mul = 1
-#         for i in range(len(nums)-1):
+#         for i in rang en(nums)-1):
 #             mul = nums[i] * mul
 #             mul1.append(mul)
 #
