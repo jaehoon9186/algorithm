@@ -116,6 +116,7 @@ class Solution:
 
         return results
 
-sol = Solution()
-nums = [-1, 0, 1, 2, -1, -4]
-print(sol.threeSum(nums))
+if __name__=="__main__":
+    sol = Solution()
+    nums = [-1, 0, 1, 2, -1, -4]
+    print(sol.threeSum(nums))

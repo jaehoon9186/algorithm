@@ -85,7 +85,7 @@ class Solution:
         return sum(sorted(nums)[::2])
 
 
-
-sol = Solution()
-nums = [1,4,3,2]
-print(sol.arrayPairSum(nums))
+if __name__=="__main__":
+    sol = Solution()
+    nums = [1,4,3,2]
+    print(sol.arrayPairSum(nums))

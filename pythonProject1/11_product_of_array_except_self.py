@@ -71,6 +71,7 @@ class Solution:
             p = p * nums[i]
         return out
 
-sol = Solution()
-nums = [1,2,3,4]
-print(sol.productExceptSelf(nums))
+if __name__=="__main__":
+    sol = Solution()
+    nums = [1,2,3,4]
+    print(sol.productExceptSelf(nums))
