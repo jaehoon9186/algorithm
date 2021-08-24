@@ -64,11 +64,11 @@ class Solution:
 
         return answer
 
-
-sol = Solution()
-paragraph = "Bob hit a ball, the hit BALL flew far after it was hit."
-banned = ["hit"]
-sol.mostCommonWord(paragraph, banned)
+if __name__=="__main__":
+    sol = Solution()
+    paragraph = "Bob hit a ball, the hit BALL flew far after it was hit."
+    banned = ["hit"]
+    sol.mostCommonWord(paragraph, banned)
 
 
 # 풀이 1

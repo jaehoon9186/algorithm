@@ -43,10 +43,10 @@ class Solution:
 
         return answer
 
-
-solution = Solution()
-s = 'A man, a plan, a canal: Panama'
-solution.isPalindrome(s)
+if __name__=="__main__":
+    solution = Solution()
+    s = 'A man, a plan, a canal: Panama'
+    print(solution.isPalindrome(s))
 
 # answer 1,2,3
 """

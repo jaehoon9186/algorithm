@@ -45,10 +45,10 @@ class Solution:
         print(answer)
         return answer.values()
 
-
-sol = Solution()
-strs = ["eat","tea","tan","ate","nat","bat"]
-sol.groupAnagrams(strs)
+if __name__=="__main__":
+    sol = Solution()
+    strs = ["eat","tea","tan","ate","nat","bat"]
+    sol.groupAnagrams(strs)
 
 
 # 풀이 1

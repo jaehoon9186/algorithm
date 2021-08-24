@@ -51,10 +51,10 @@ class Solution:
         print(le+di)
         return le+di
 
-
-sol = Solution()
-logs = ["dig1 8 1 5 1","let1 art can","dig2 3 6","let2 own kit dig","let3 art zero"]
-sol.reorderLogFiles(logs)
+if __name__=="__main__":
+    sol = Solution()
+    logs = ["dig1 8 1 5 1","let1 art can","dig2 3 6","let2 own kit dig","let3 art zero"]
+    sol.reorderLogFiles(logs)
 
 # 풀이 1
 """

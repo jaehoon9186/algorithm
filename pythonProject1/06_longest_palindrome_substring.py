@@ -76,7 +76,7 @@ class Solution:
 
         return result
 
-
-sol = Solution()
-s = "babad"
-print("답:", sol.longestPalindrome(s))
+if __name__=="__main__":
+    sol = Solution()
+    s = "babad"
+    print("답:", sol.longestPalindrome(s))

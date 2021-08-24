@@ -33,10 +33,10 @@ class Solution:
         """
         s[:] = s[::-1]
 
-
-solution = Solution()
-s = ["h", "e", "l", "l", "o"]
-solution.reverseString(s)
+if __name__=="__main__":
+    solution = Solution()
+    s = ["h", "e", "l", "l", "o"]
+    solution.reverseString(s)
 
 # 풀이 1, 2
 """
