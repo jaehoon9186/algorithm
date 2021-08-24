@@ -54,6 +54,7 @@ class Solution:
         return True
 
 
-sol = Solution()
-head = ListNode([1, 2, 2, 2])
-print(sol.isPalindrome(head))
+if __name__=="__main__":
+    sol = Solution()
+    head = ListNode([1, 2, 2, 2])
+    print(sol.isPalindrome(head))
