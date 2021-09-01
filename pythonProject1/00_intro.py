@@ -30,3 +30,12 @@ repl도구로 코드검증할것
 문제해결 - 코딩 - 검증 - 커뮤니케이션
 
 """
+
+""" 배열 """
+# 요소 파악
+# 딕셔너리 자료형으로 key랑 갯수 리턴
+# 문자열을 하나씩 뽑고 딕셔너리로 선언된 변수에 넣어도 될듯 +=1
+d1 = collections.Counter(배열)
+
+# 비교 생략
+freqs = collections.defaultdict(int)
