@@ -39,3 +39,30 @@ d1 = collections.Counter(배열)
 
 # 비교 생략
 freqs = collections.defaultdict(int)
+
+# s 문자열의 인덱스번호, 문자 리턴 반복
+for index, char in enumerate(s):
+
+# 딕셔너리 -> 튜플 -> value 값으로 정렬 x[0] 키로 , x[1]값으로
+# 값으로 키 정렬  -> 딕셔너리로 ->  키값만 리스트로 리턴
+list(dict(sorted(answer.items(), key=lambda x: x[1], reverse=True)).keys())
+
+
+#진수 변환
+bin(숫자), oct(), hex()
+0b1010, 0o블라블라, 0x블라블라
+format(42, 'b') -> 42 2진수로 변환
+format(42, '#o') -> +접두어
+
+int('0b101010', 2), int('0o52', 8), int('0x2a', 16)
+
+# 문자열 바꾸기
+str1.replace('old', 'new')
+
+# 문자열 갯수 맞추기
+str.zfill(8)
+str.ljust(8, '0')
+str.rjust(8, '0')
+
+# 절대값
+abs(5-2)
