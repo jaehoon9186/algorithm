@@ -66,3 +66,61 @@ str.rjust(8, '0')
 
 # 절대값
 abs(5-2)
+
+
+"""정규식"""
+# 정규식 정규표현식 regex
+# 문법 정리
+
+# Groups and ranges
+# Chracter	뜻
+# |	또는      (Hi | Hello)
+# ()	그룹  (Hi | Hello) | (and)  그룹 a 그룹b / gr(e|a)y
+# []	문자셋, 괄호안의 어떤 문자든 gr[abcdef]y  gr[a-f]y [a-zA-Z0-9]
+# [^]	부정 문자셋, 괄호안의 어떤 문가 아닐때 [^a-zA-Z0-9] 모든 대소문자, 숫자 제외
+# (?:)	찾지만 기억하지는 않음  gr(?:e|a)y  그룹지정하지 않음
+
+# Quantifiers
+# Chracter	뜻
+# ?	없거나 있거나 (zero or one)          gra?y > gry, gray  매치
+# *	없거나 있거나 많거나 (zero or more)  gra*y > gry, gray, graaaay
+# +	하나 또는 많이 (one or more)         gra+y >      gray, graaaaaaay
+# {n}	n번 반복               gra{2}y  > graay
+# {min,}	최소               gra{2,}y  > graay graaay graaaay
+# {min,max}	최소, 그리고 최대  gra{2,3}y  > graay graaay
+
+# Boundary-type
+# Chracter	뜻
+# \b	단어 경계          \bYa > Ya-- 앞에 Ya선택  //Ya\b > --Ya 뒤에 Ya선택
+# \B	단어 경계가 아님   Ya\B > YaYa--  Ya중에서도 뒤에서 Ya가 안쓰이는
+# ^	문장의 시작      ^Ya
+# $	문장의 끝        Ya$
+
+# Character classes
+# Chracter	뜻
+# \	특수 문자가 아닌 문자        \[\] 이렇게 찾아야함
+# .	어떤 글자 (줄바꿈 문자 제외)
+# \d	digit 숫자
+# \D	digit 숫자 아님
+# \w	word 문자
+# \W	word 문자 아님
+# \s	space 공백
+# \S	space 공백 아님
+
+import re
+p = re.compile('ab*')
+# match
+p = re.compile('[a-z]+')
+m = p.match('python') # 같냐 안같냐
+
+# search
+m = p.search('')
+
+#findall 일치하는것을 찾아서 리스트로 리턴
+#finditer 일치하는 것을 찾아서 이터레이터로 리턴
+
+# 매치객체를 받아
+m.group()
+m.start()
+m.end()
+m.span()
