@@ -68,12 +68,49 @@ u의 앞뒤 문자를 제거하고, 나머지 문자의 괄호 방향을 뒤집�
 
 """
 
+
 def solution(p):
     answer = ''
 
-    return answer
+    # 변경하기 위한 딕셔너리
+    change_dic = {"(": ")", ")": "("}
+
+    # 배열 길이 0일때 리턴
+    if len(p) == 0:
+        return p
+
+    # p를 한개씩 돌며 +,- 수치를 기록 0이 들어가는 인덱스가 나눠져야할 부분
+    balance_check = []
+    left = 0
+    right = 0
+    for i in p:
+        if i == '(':
+            left += 1
+        elif i == ')':
+            right += 1
+        balance_check.append(left - right)
+
+    # +1, +2, -1, 0등으로 기록된 balance_check에서 0을 찾아 해당 인덱스를 리턴 > slice_index 에 할당
+    slice_index = 0
+    for i in range(0, len(balance_check)):
+        if balance_check[i] == 0:
+            slice_index = i
+            break
+
+    # u '(',')'갯수맞는 최소 단위 /  v 나머지
+    u, v = p[:slice_index + 1], p[slice_index + 1:]
+    # -1 이 없다면 u에 해당하는 balance_check에 음수가 없다면 완벽한 괄호로 구성된 상태
+    if -1 not in balance_check[:slice_index + 1]:
+        return u + solution(v)
+    else:
+        empty = '(' + solution(v) + ')'
+        u = u[1:-1]
+        u2 = ''
+        for i in u:
+            u2 += change_dic[i]
+        return empty + u2
 
 
 if __name__ == "__main__":
-    p = ")))(((()"
+    p = "()))((()"
     print(solution(p))
